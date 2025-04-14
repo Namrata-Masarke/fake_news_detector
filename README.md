@@ -42,9 +42,9 @@ cd fake-news-detector
 
 
 ## 2. Create a Virtual Environment (optional but recommended)
-python -m venv venv
-source venv/bin/activate  # For Linux/Mac
-venv\Scripts\activate     # For Windows
+- python -m venv venv
+- source venv/bin/activate  # For Linux/Mac
+- venv\Scripts\activate     # For Windows
 
 ## 3. Install Dependencies
 Install all required libraries using pip:
