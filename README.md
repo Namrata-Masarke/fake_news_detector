@@ -36,87 +36,78 @@ A powerful and interactive Streamlit web application to detect **fake news** usi
 
 ### 1. Clone the Repository
 
-```bash
+''' bash
 git clone https://github.com/yourusername/fake-news-detector.git
-cd fake-news-detector
+cd fake-news-detector 
 
 
-
-2. Create a Virtual Environment (optional but recommended)
-bash
-Copy code
+## 2. Create a Virtual Environment (optional but recommended)
 python -m venv venv
 source venv/bin/activate  # For Linux/Mac
 venv\Scripts\activate     # For Windows
-3. Install Dependencies
+
+## 3. Install Dependencies
 Install all required libraries using pip:
+- pip install -r requirements.txt
 
-bash
-Copy code
-pip install -r requirements.txt
-4. Install Tesseract OCR Engine
-Windows: Download EXE from Tesseract OCR
+## 4. Install Tesseract OCR Engine
+- Windows: Download EXE from Tesseract OCR
 Linux:
-bash
-Copy code
-sudo apt install tesseract-ocr
+- sudo apt install tesseract-ocr
 Mac:
-bash
-Copy code
-brew install tesseract
-📁 Required Files
-model.pkl: Pre-trained ML model and vectorizer (generated after training)
+- brew install tesseract
+## 📁 Required Files
+- model.pkl: Pre-trained ML model and vectorizer (generated after training)
 
-news.csv: Dataset used for model training (text and label columns)
+- news.csv: Dataset used for model training (text and label columns)
 
-news_image.png: Optional UI image
+- news_image.png: Optional UI image
 
-app.log: Auto-generated logs
+- app.log: Auto-generated logs
 
-result.txt: Downloadable prediction output
+- result.txt: Downloadable prediction output
 
-💡 How to Use
-Launch the App
+## 💡 How to Use
+### Launch the App
 Run the following command to start the app:
+- streamlit run app.py
+  
+## Interface Options
+- Paste News Article: Manually enter the article content.
 
-bash
-Copy code
-streamlit run app.py
-Interface Options
-Paste News Article: Manually enter the article content.
+- Paste Article URL: Enter the link to a news article; it will be scraped automatically.
 
-Paste Article URL: Enter the link to a news article; it will be scraped automatically.
+- Upload News Image: Upload an image; OCR will extract and analyze the text.
 
-Upload News Image: Upload an image; OCR will extract and analyze the text.
+- Results
+1. 🧠 Prediction: Shows whether the article is Fake or Real
 
-Results
-🧠 Prediction: Shows whether the article is Fake or Real
+2. 💯 Confidence: Prediction probability
 
-💯 Confidence: Prediction probability
+3. 💬 Sentiment: Positive / Negative / Neutral
 
-💬 Sentiment: Positive / Negative / Neutral
+4. 📥 Option: Download results as .txt file
 
-📥 Option: Download results as .txt file
+## 🔄 Retraining the Model
+### You can retrain the model with your custom dataset. Make sure you have a file named news.csv in the root directory, containing news articles and their labels.
+- Click the "🔁 Retrain the Model" button. Ensure news.csv is present in the root directory.
 
-🔄 Retraining the Model
-Click the "🔁 Retrain the Model" button. Ensure news.csv is present in the root directory.
-
-📓 Logging
+## 📓 Logging
 All predictions and events are logged in app.log for audit or debugging purposes.
 
-🧑‍💻 Author
-Name: Namrata Masarke
+## 🧑‍💻 Author
+- Name: Namrata Masarke
 
-Email: namratamasarke@gmail.com
+- Email: namratamasarke@gmail.com
 
-LinkedIn: LinkedIn Profile
+- LinkedIn: LinkedIn Profile
 
-GitHub: GitHub Profile
+- GitHub: GitHub Profile
 
-📄 License
+## 📄 License
 This project is open-source and available under the MIT License.
 
-📸 Sample Screenshots
+## 📸 Sample Screenshots
 1. Home Page
 
 2. Text-based Input
@@ -125,30 +116,29 @@ This project is open-source and available under the MIT License.
 
 4. Image Upload with OCR
 
-🚀 Usage Demo
+## 🚀 Usage Demo
 To run the app, follow these steps:
 
-Open a terminal and navigate to the project directory.
+1. Open a terminal and navigate to the project directory.
 
-Run the following command:
-
-bash
-Copy code
+2. Run the following command:
 streamlit run app.py
-The app will launch in your browser. You'll be able to:
 
-Paste a news article text directly
 
-Paste a URL and scrape the news article
+3. The app will launch in your browser. You'll be able to:
 
-Upload an image with OCR for extracting news text
+- Paste a news article text directly
 
-Once you've provided an input, the app will display:
+- Paste a URL and scrape the news article
 
-Whether the news is real or fake
+- Upload an image with OCR for extracting news text
 
-The confidence level of the prediction
+4. Once you've provided an input, the app will display:
 
-The sentiment of the article (Positive / Negative / Neutral)
+- Whether the news is real or fake
 
-The option to download the result as a .txt file
+- The confidence level of the prediction
+
+- The sentiment of the article (Positive / Negative / Neutral)
+
+- The option to download the result as a .txt file
